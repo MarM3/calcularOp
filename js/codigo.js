@@ -1,20 +1,32 @@
-function validarNumero(campo){
-    var patron = /^[0-9]*$/;
-
-    if (!patron.test(campo)){
-        return false;
-    }
-}
-
-function multiplica(){
+function multiplica() {
     var num1 = document.getElementById("n1").value;
     var num2 = document.getElementById("n2").value;
+    var patron = /^[1-9]+$/;
+
+    if (!patron.test(num1)) {
+        alert("El primer número introducido no es correcto.");
+        return false;
+    }
+    if (!patron.test(num2)) {
+        alert("El segundo número introducido no es correcto.");
+        return false;
+    }
     document.getElementById("resultado").innerHTML = num1 * num2;
 }
 
-function divide(){
+function divide() {
     var num1 = document.getElementById("n1").value;
     var num2 = document.getElementById("n2").value;
+    var patron = /^[1-9]+$/;
+
+    if (!patron.test(num1)) {
+        alert("El primer número introducido no es correcto.");
+        return false;
+    }
+    if (!patron.test(num2)) {
+        alert("El segundo número introducido no es correcto.");
+        return false;
+    }
     document.getElementById("resultado").innerHTML = num1 / num2;
 }
 
